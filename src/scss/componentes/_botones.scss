@@ -1,0 +1,54 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.boton{
+
+    @include m.boton(v.$azul,v.$blanco);
+    border-radius: 10px;
+    margin: 3rem auto;
+}
+.botoncerrar{
+
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: end;
+    
+}
+.cerrarsesion,
+.boton-eliminar{
+
+    color:v.$blanco;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s linear;
+    &:hover{
+
+        transform: scale(1.1);
+        background-color: rgb(73, 73, 73);
+    }
+  
+}
+.boton-eliminar{
+
+    margin: 1rem;
+    border: none;
+    background-color: transparent;
+}
+.icon {
+
+    margin: 0 auto;
+    transition: all 0.3s linear;
+ 
+    &:hover {
+       cursor: pointer;
+ 
+    }
+
+    &.girar{
+
+        transform:rotate(180deg);
+    }
+ 
+ }

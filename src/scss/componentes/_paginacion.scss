@@ -1,0 +1,19 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+
+.paginacion{
+
+    
+
+    @include m.tablet{
+
+        display: flex;
+        
+    }
+
+    .ocultar{
+        display: none;
+    }
+
+}

@@ -1,0 +1,132 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.nosotros{
+    display:block;
+    margin:5rem 0;
+    line-height: 1.5;
+    height: auto;
+
+    @include m.tablet
+    {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        
+    }
+    
+
+    p{
+        font-size: 1.8rem;
+        margin: 0;
+        padding: 0;
+        
+        
+    }
+
+    img{
+        width: 100%;
+        
+        
+        
+    }
+
+}
+
+.equipo{
+
+    display: flex;
+    align-items: center;
+    height: auto;
+    padding: 2rem 0;
+    margin-bottom: 4rem;
+    background-color: rgba(0, 0, 0, 0.226) ;
+    border-radius: 10px;
+    overflow: hidden;
+
+    @include m.tablet{
+        height: auto;
+        
+    }
+
+
+}
+
+.miembros{
+
+    display: flex;
+    width: 100%;
+    animation: slide 20s infinite alternate ease-in-out;
+
+    span{
+        font-family: v.$fuente-firma;
+        font-size: 4rem;
+        color: v.$blanco;
+        
+    }
+    p{
+        color: gray;
+    }
+ 
+}
+@keyframes slide {
+
+    0% {margin-left: 0;}
+    20% {margin-left: 0%;}
+
+    25% {margin-left: -100%;}
+    50% {margin-left: -100%;}
+
+    55% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+
+
+.miembro{
+
+    height: 100%;
+    flex: 0 0 100%;
+    padding: 2rem;
+    display: block;
+    text-align: center;
+    gap:2rem;
+    
+    @include m.tablet{
+        display:flex;
+   }
+     
+   
+    
+    img{
+
+        filter:grayscale(100%);
+        height: 30rem;
+        width: 25rem;
+    }
+   
+}
+
+.imgEspacio{
+    display: block;
+    width: 95%;
+    margin: 6rem 0;
+    
+
+    @include m.tablet{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        gap: 2rem;
+    }
+
+    img{
+        width: 100%;
+
+    }
+}
+

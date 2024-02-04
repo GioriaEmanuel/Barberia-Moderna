@@ -1,0 +1,38 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.error{
+
+     @include m.boton(v.$rojo,v.$blanco);
+     border-radius: 10px;
+
+
+}
+.exito{
+    @include m.boton(v.$verde,v.$blanco);
+    border-radius: 10px;
+
+}
+.alerta{
+    @include m.boton(v.$azul,v.$blanco);
+    border-radius: 10px;
+}
+.swal2-popup{
+
+    
+    padding: 3%;
+    height: 35rem;
+    width: 35rem;
+
+    h2{
+        font-size: 3rem;
+        padding: 0;
+    }
+    span{
+        width: 6rem;
+        height: 6rem;
+
+    }
+   
+}

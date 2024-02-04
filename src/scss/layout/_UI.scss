@@ -1,0 +1,212 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor-app{
+    
+    @include m.tablet{
+
+        display: grid;
+        grid-template-columns: repeat(2 ,1fr);
+        min-height: 100vh;
+        
+        
+    }
+
+    .imagen{
+
+        background-image: url(../img/imagenlogin.jpeg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        filter:sepia(30%);
+        
+        
+        height: 30rem;
+       
+
+        @include m.tablet{
+            height: auto;
+            
+        }
+    
+    }
+    .app{
+       width: 95%;
+       padding: 3rem 0;
+       margin: 0 auto;
+       border-left: 1px transparent black;
+        
+    }
+}
+
+.contenedor-app-cita {
+
+    .app-cita {
+
+        @include m.tablet{
+            width: 70%;
+            
+        }
+        width: 95%;
+        padding: 3rem 0;
+        margin: 0 auto;
+    }
+}
+.headercita{
+
+    display: grid;
+    position: relative;
+    
+    .logo{
+
+        height: 15rem;
+        width: 15rem;
+        position: absolute;
+        justify-self: center;
+        align-self: center;
+        filter:brightness(1.1);
+        mix-blend-mode: multiply;
+        transition: all 1s ease;
+        
+        @include m.telefono{
+            height: 20rem;
+            width: 20rem;
+        }
+    
+        @include m.tablet{      
+    
+            height: 40rem;
+            width: 40rem;
+            
+        }
+      
+       
+    }
+    
+    
+
+}
+
+.imagen-cita {
+
+    background-image: url(../img/bannercitas.jpg);
+    background-size: cover;
+    background-position: center center;
+    filter: blur(5px);
+    height: 30rem;
+ 
+    
+   
+}
+
+.contenedor-app-panel {
+
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    display: block;
+    width: 95%;
+    margin:3rem 0;
+
+
+    .app-panel {
+
+
+        .botones-panel {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+
+            .boton {
+
+                width: 20rem;
+                height: 15rem;
+                transition: all 1s ease;
+
+                &:hover {
+
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+
+
+    }
+}
+
+.contenedor-imagenes-panel {
+
+    .imagenes-panel {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6rem;
+        height: 100%;
+        margin-top: 5rem;
+        
+    }
+
+
+}
+
+.imagen-panel1 {
+
+    background-image: url(../img/panel1.jpg);
+    transform: rotate(15deg);
+}
+
+.imagen-panel2 {
+    transform: rotate(-15deg);
+    background-image: url(../img/panel2.jpg);
+}
+
+.imagen-panel3 {
+    transform: rotate(15deg);
+    background-image: url(../img/panel3.jpg);
+}
+
+.imagen-panel1,
+.imagen-panel2,
+.imagen-panel3 {
+
+    background-size: cover;
+    background-position: center center;
+    filter: blur(2px);
+    height: 15rem;
+    width: 20rem;
+    border-radius: 5px;
+    border: 1px solid v.$blanco;
+    transition: all 1.2s ease;
+    color: transparent;
+    text-align: end;
+    
+
+    &:hover{
+        
+        transform: rotate(0);
+        color: v.$blanco;
+        filter: none;
+        @include m.tablet {
+      
+            transform: scale(1.5) translate(-50px);
+            z-index: 2;
+
+
+    }
+    }
+
+  
+
+
+}
+
+.contenedor-calendario{
+
+    margin-top: 5rem;
+}

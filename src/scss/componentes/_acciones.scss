@@ -1,0 +1,37 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.acciones {
+
+    display: flex;
+    margin: 3rem 0;
+    align-self: end;
+    justify-content: space-evenly;
+    
+    @include m.tablet {
+       
+        align-items: center;
+        
+        
+
+    }
+
+    a {
+        color: v.$blanco;
+        padding: 0.5rem;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: all 0.3s linear;
+
+        &:hover {
+
+            transform: scale(1.1);
+            background-color: rgb(73, 73, 73);
+            
+        }
+
+    }
+
+
+}

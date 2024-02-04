@@ -1,0 +1,66 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+.seccion {
+
+   display: none;
+}
+
+.mostrar {
+
+   display: block;
+}
+
+.citas {
+
+   max-height: 60rem;
+   overflow-y: scroll;
+   margin-bottom: 3rem;
+   scroll-behavior:smooth;
+    scrollbar-color: v.$azul transparent;
+    scrollbar-width: thin;
+  
+
+
+   .hora {
+      border-bottom: 1px solid v.$blanco;
+      margin-bottom: 2rem;
+      font-weight: bold;
+   }
+
+   .fecha {
+
+      font-weight: bold;
+
+
+   }
+   .citaid{
+
+      text-align: center;
+      padding-top: 2rem;
+      font-weight: bold;
+      margin: 0;
+  }
+
+   span {
+      color: v.$azul;
+      font-weight: bold;
+   }
+}
+
+
+.detalles-cita {
+
+   visibility: hidden;
+   height: 0;
+   opacity: 0;
+
+
+   &.mostrar {
+      visibility: visible;
+      height: auto;
+      opacity: 1;
+      transition: all 1s ease-in-out;
+   }
+}
+
