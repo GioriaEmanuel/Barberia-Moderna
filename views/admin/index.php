@@ -1,8 +1,8 @@
 <h3 class="titulo" data-nombre="<?php echo $nombre; ?>">Bienvenido <?php echo $nombre; ?></h3>
 
 <nav class="navegacion">
-        <button class="tabs" type="button" href="/servicios" >Ver Servicios</button>
-        <button class="tabs" type="button" href="/admin/crear">Crear Servicio</button>
+        <a class="tabs" type="button" href="/servicios" >Ver Servicios</a>
+        <a class="tabs" type="button" href="/admin/crear">Crear Servicio</a>
     </nav>
 
 <div class="busqueda">

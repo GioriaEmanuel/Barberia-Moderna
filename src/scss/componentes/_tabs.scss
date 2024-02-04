@@ -5,11 +5,12 @@
 .navegacion {
 
     margin-bottom: 2rem;
-    
+   
 
     @include m.tablet {
 
         display: flex;
+
 
 
     }

@@ -42,7 +42,7 @@ function iniciarapp() {
 
 function Tabs() {//Esta funcion detecta cuando se clickea en un tab y llama a la funcion de mostrar seccion
 
-    const botones = document.querySelectorAll('.navegacion button');
+    const botones = document.querySelectorAll('.navegacion a');
     
     botones.forEach(function (boton) {
 
