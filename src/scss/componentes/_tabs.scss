@@ -27,6 +27,7 @@
         text-transform: uppercase;
         font-weight: bold;
         transition: all 0.8s;
+        text-align: center;
 
         @include m.tablet{
             &:first-child{

@@ -29,7 +29,7 @@ class Email
         $mail->Port = $_ENV['EMAIL_PORT'];
         $mail->Username = $_ENV['EMAIL_USER'];
         $mail->Password = $_ENV['EMAIL_PASS'];
-        $mail->SMTPSecure=PHPMailer::ENCRYPTION_STARTTLS;
+        
   
 
         $mail->setFrom('fercross2014@gmail.com');
@@ -68,7 +68,7 @@ class Email
         $mail->Port = $_ENV['EMAIL_PORT'];
         $mail->Username = $_ENV['EMAIL_USER'];
         $mail->Password = $_ENV['EMAIL_PASS'];
-        $mail->SMTPSecure=PHPMailer::ENCRYPTION_STARTTLS;
+        
         $mail->setFrom('fercross2014@gmail.com');
         $mail->addAddress($this->email, 'AppSalon.com');
         $mail->Subject = 'Reestablece tu password';
