@@ -8,9 +8,9 @@
 <div id="app">
 
     <nav class="navegacion">
-        <button class="tabs seleccionado" type="button" data-paso="1">Servicios</button>
-        <button class="tabs" type="button" data-paso="2">Informacion Cita</button>
-        <button class="tabs" type="button" data-paso="3">Resumen</button>
+        <a class="tabs seleccionado" type="button" data-paso="1">Servicios</a>
+        <a class="tabs" type="button" data-paso="2">Informacion Cita</a>
+        <a class="tabs" type="button" data-paso="3">Resumen</a>
     </nav>
 
 

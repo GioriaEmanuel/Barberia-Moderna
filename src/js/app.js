@@ -133,7 +133,7 @@ async function consultarAPI() {
 
 
     try {
-        const url = `${location.origin}/api/servicios`;
+        const url = "/api/servicios";
         console.log(url);
         const resultado = await fetch(url);
         const datos = await resultado.json();
@@ -352,17 +352,16 @@ async function reservarcita() {
     datos.append('hora', hora);
     datos.append('servicios', serviciosID);
     datos.append('usuario_id', usuarioID);
-    console.log(datos);
 
     try {
         //conectar con la api
     //creo la variable que contiene la url de la api
-    const url = `${location.origin}/api/servicios`;
+    const url = `/api/citas`;
     //envio la consulta con un await por si demora
     //el sendo parametro es la configuracion que esta en un objeto, en este caso el metodo POST
     const respuesta = await fetch(url, { method: 'POST', body: datos });
     const resultado = await respuesta.json();
-    console.log(resultado);
+    console.log(respuesta);
    
     //si la url soporta el metodo post emite respuesta
     if (resultado){
