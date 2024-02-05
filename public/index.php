@@ -4,7 +4,7 @@ require_once __DIR__ . '/../includes/app.php';
 //inclusion de controllers
 
 use Controllers\AdminController;
-use Controllers\ApiController;
+use Controllers\APIController;
 use Controllers\CitasController;
 use Controllers\LoginController;
 use Controllers\ServicioController;
@@ -45,9 +45,9 @@ $router->get('/admin',[AdminController::class,'index']);
 
 //API  de  citas
 
-$router->get('/api/servicios',[ApiController::class,'index']);
-$router->post('/api/citas',[ApiController::class,'guardar']);
-$router->post('/api/eliminar',[ApiController::class,'eliminar']);
+$router->get('/api/servicios',[APIController::class,'index']);
+$router->post('/api/citas',[APIController::class,'guardar']);
+$router->post('/api/eliminar',[APIController::class,'eliminar']);
 
 //CRUD de Servicios
 
