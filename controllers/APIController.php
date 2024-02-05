@@ -7,7 +7,9 @@ use Model\CitaServicio;
 use Model\Servicio;
 
 class APIController {
+
     public static function index() {
+
         $servicios = Servicio::all();
         echo json_encode($servicios);
     }
@@ -46,3 +48,5 @@ class APIController {
         }
     }
 }
+
+?>

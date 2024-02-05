@@ -136,6 +136,7 @@ async function consultarAPI() {
         const url = "/api/servicios";
         console.log(url);
         const resultado = await fetch(url);
+        console.log(resultado);
         const datos = await resultado.json();
         mostrarDatos(datos);
 
