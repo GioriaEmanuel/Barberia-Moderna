@@ -5,14 +5,14 @@ namespace Controllers;
 use Model\Cita;
 use Model\CitaServicio;
 use Model\Servicio;
-use MVC\Router;
+
 
 class APIController {
 
     public static function index() {
    
         $servicios = Servicio::all();
-        echo json_encode($servicios);
+        echo json_encode($servicios,JSON_UNESCAPED_UNICODE);
     }
 
     public static function guardar() {
